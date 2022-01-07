@@ -1,9 +1,7 @@
 public class StringEditingTab extends StringEditing {
-    private char[][] solution;
 
     public StringEditingTab(String str1, String str2) {
         super(str1, str2);
-        solution = new char[str1.length()][str2.length()];
     }
 
     @Override
