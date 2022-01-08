@@ -3,12 +3,12 @@ import java.io.IOException;
 public class Program {
     public static void main(String[] args) {
         test();
-        Coordinator coordinator = new Coordinator();
-        try {
-            coordinator.experiment(1000, 50);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        Coordinator coordinator = new Coordinator();
+//        try {
+//            coordinator.experiment(1000, 50);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     static void test(String str1, String str2){
@@ -20,18 +20,22 @@ public class Program {
         System.out.println("String editing Memoized minimum cost: "+mem.solve());
         System.out.println("Operations/Steps:");
         mem.getAnswer();
+        mem.print();
         System.out.println();
         System.out.println("String editing Tabular minimum cost: "+tab.solve());
         System.out.println("Operations/Steps:");
         tab.getAnswer();
+        tab.print();
         System.out.println();
     }
 
     static void test(){
         test("abcdbdc","bddb");
         test("zatta","zauuaa");
-        test("a", "xaeq");
+        test("a", "eqxa");
         test("axxxaaass","oop");
-        test("lllq","p");
+        test("lllq","pla");
+        test("qrst","wqryz");
+        test("azata","t");
     }
 }

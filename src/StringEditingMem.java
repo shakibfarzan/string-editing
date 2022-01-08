@@ -43,7 +43,7 @@ public class StringEditingMem extends StringEditing {
             } else {
                 int delete = costs[i - 1][j], convert = costs[i - 1][j - 1], insert = costs[i][j - 1],
                         disDelete = currentRes - delete, disConvert = currentRes - convert, disInsert = currentRes - insert;
-                if ((delete==0 && insert == 0)||disConvert > disDelete && disConvert > disInsert) {
+                if ((delete==0 && insert == 0)||(delete == 0 && disDelete > 1)||disConvert > disDelete && disConvert > disInsert) {
                     if (disConvert != 0) System.out.println("Index: " + (i - 1) + " -> Convert");
                     currentRes = convert;
                     i--;
